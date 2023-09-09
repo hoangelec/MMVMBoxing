@@ -1,0 +1,28 @@
+{
+  "name": "FoundationKit",
+  "version": "0.1.0",
+  "summary": "A short description of FoundationKit.",
+  "homepage": "https://github.com/Mike Cap/FoundationKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Mike Cap": "hoangelec@icloud.com"
+  },
+  "source": {
+    "git": "https://github.com/Mike Cap/FoundationKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "FoundationKit/Classes/**/*",
+  "testspecs": [
+    {
+      "name": "Tests",
+      "test_type": "unit",
+      "source_files": "Tests/**/*"
+    }
+  ]
+}

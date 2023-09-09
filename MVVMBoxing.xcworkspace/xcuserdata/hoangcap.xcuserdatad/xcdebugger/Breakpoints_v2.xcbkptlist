@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0771FFAC-AAEC-4539-B319-C025C64E901E"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FDB0BECB-7D01-490C-B90F-8B617B7921DC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVVMBoxing/ViewController/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "textFieldDidChange(textField:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FDB0BECB-7D01-490C-B90F-8B617B7921DC - 2251820065a4eb35"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVVMBoxing.ViewController.textFieldDidChange(textField: __C.UITextField) -&gt; ()"
+                  moduleName = "MVVMBoxing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoangcap/Desktop/Projects/Study/MVVMBoxing/MVVMBoxing/ViewController/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "FDB0BECB-7D01-490C-B90F-8B617B7921DC - 1171edd8c4bd124a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;Swift.String&gt;, Swift.Error&gt;) -&gt; () in MVVMBoxing.ViewController.textFieldDidChange(textField: __C.UITextField) -&gt; ()"
+                  moduleName = "MVVMBoxing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoangcap/Desktop/Projects/Study/MVVMBoxing/MVVMBoxing/ViewController/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "FDB0BECB-7D01-490C-B90F-8B617B7921DC - acdc2dbe03c79825"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;Swift.String&gt;, Swift.Error&gt;) -&gt; () in MVVMBoxing.ViewController.textFieldDidChange(textField: __C.UITextField) -&gt; ()"
+                  moduleName = "MVVMBoxing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoangcap/Desktop/Projects/Study/MVVMBoxing/MVVMBoxing/ViewController/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "FDB0BECB-7D01-490C-B90F-8B617B7921DC - 1171edd8c4bd122b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;Swift.String&gt;, Swift.Error&gt;) -&gt; () in MVVMBoxing.ViewController.textFieldDidChange(textField: __C.UITextField) -&gt; ()"
+                  moduleName = "MVVMBoxing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoangcap/Desktop/Projects/Study/MVVMBoxing/MVVMBoxing/ViewController/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "FDB0BECB-7D01-490C-B90F-8B617B7921DC - acdc2dbe03c79825"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;Swift.String&gt;, Swift.Error&gt;) -&gt; () in MVVMBoxing.ViewController.textFieldDidChange(textField: __C.UITextField) -&gt; ()"
+                  moduleName = "MVVMBoxing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoangcap/Desktop/Projects/Study/MVVMBoxing/MVVMBoxing/ViewController/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "FDB0BECB-7D01-490C-B90F-8B617B7921DC - 7b01354b69427e49"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc MVVMBoxing.ViewController.textFieldDidChange(textField: __C.UITextField) -&gt; ()"
+                  moduleName = "MVVMBoxing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoangcap/Desktop/Projects/Study/MVVMBoxing/MVVMBoxing/ViewController/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -1,0 +1,37 @@
+PODS:
+  - Alamofire (5.8.0)
+  - Factory (2.2.0)
+  - FoundationKit (0.1.0)
+  - NetworkKit (0.1.0):
+    - Alamofire
+    - FoundationKit
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - Factory
+  - FoundationKit (from `LocalPods/FoundationKit`)
+  - NetworkKit (from `LocalPods/NetworkKit`)
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Factory
+    - SnapKit
+
+EXTERNAL SOURCES:
+  FoundationKit:
+    :path: LocalPods/FoundationKit
+  NetworkKit:
+    :path: LocalPods/NetworkKit
+
+SPEC CHECKSUMS:
+  Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
+  Factory: ec9527abfa59ddf2a1b024914b1e380f616f9e03
+  FoundationKit: 45c02ba2c33004d8093fa826552992149649479a
+  NetworkKit: c6ec698a997c0daaa0658cb94cd53975e161db4e
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 1d684ed20a5ca78afccaf2a652b1de7ba04b8f64
+
+COCOAPODS: 1.12.1

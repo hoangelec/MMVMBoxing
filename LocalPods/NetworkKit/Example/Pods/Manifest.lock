@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (5.8.0)
+  - FoundationKit (0.1.0)
+  - NetworkKit (0.1.0):
+    - Alamofire
+    - FoundationKit
+
+DEPENDENCIES:
+  - Alamofire
+  - FoundationKit (from `../../FoundationKit`)
+  - NetworkKit (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+
+EXTERNAL SOURCES:
+  FoundationKit:
+    :path: "../../FoundationKit"
+  NetworkKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
+  FoundationKit: 45c02ba2c33004d8093fa826552992149649479a
+  NetworkKit: c6ec698a997c0daaa0658cb94cd53975e161db4e
+
+PODFILE CHECKSUM: 61a308fc99df8076a49721c2f7c0d8fb540eaad7
+
+COCOAPODS: 1.12.1
