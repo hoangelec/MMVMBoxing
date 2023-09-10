@@ -19,23 +19,26 @@ final class DefaultMainViewModel {
     
     @Published var searchResult: [Movie]?
     
-    private var previousTask: Task<Movie, Error>?
+    private var previousTask: Task<Void, Error>?
     
     @LazyInjected(\ServicesContainer.moviesService)
     private var service: MoviesService
     
     func scheduleSearch(keyword: String) {
+        previousTask?.cancel()
         guard keyword.count > 3 else { return }
         
-        Task.detached { [self] in
+        previousTask = Task.detached { [self] in
             print("Schedule search for: \(keyword)")
+            try await Task.sleep(nanoseconds: 1000_000_000)
+            print("Started search for: \(keyword)")
             do {
                 let movies = try await service.search(movieName: keyword)
+                if keyword == "Once" { try await Task.sleep(nanoseconds: 4000_000_000) }
                 searchResult = movies
             } catch {
                 print(error)
             }
-            
         }
         
     }
