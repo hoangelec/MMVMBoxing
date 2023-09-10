@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-MVVMBoxing/Pods-MVVMBoxing-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Factory/Factory.framework
+${BUILT_PRODUCTS_DIR}/FoundationKit/FoundationKit.framework
+${BUILT_PRODUCTS_DIR}/NetworkKit/NetworkKit.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework

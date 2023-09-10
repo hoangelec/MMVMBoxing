@@ -7,33 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C65B2A42AAB75B900A4446C /* PokeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C65B2A32AAB75B900A4446C /* PokeService.swift */; };
-		5C95707D2AAB20040093DEF3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C95707C2AAB20040093DEF3 /* ViewModel.swift */; };
+		5C5C3D612AAD59570084C3DC /* ServicesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5C3D602AAD59570084C3DC /* ServicesContainer.swift */; };
+		5C65B2A42AAB75B900A4446C /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C65B2A32AAB75B900A4446C /* MoviesService.swift */; };
+		5C95707D2AAB20040093DEF3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C95707C2AAB20040093DEF3 /* MainViewModel.swift */; };
 		5CB89D8A2AAC25760017A2DE /* NetworkEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB89D892AAC25760017A2DE /* NetworkEndPoints.swift */; };
 		5CB89D902AAC27C30017A2DE /* AppConfigurationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB89D8F2AAC27C30017A2DE /* AppConfigurationContainer.swift */; };
 		5CFC8AA72AAB1EFA00BC2B37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFC8AA62AAB1EFA00BC2B37 /* AppDelegate.swift */; };
 		5CFC8AA92AAB1EFA00BC2B37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFC8AA82AAB1EFA00BC2B37 /* SceneDelegate.swift */; };
-		5CFC8AAB2AAB1EFA00BC2B37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFC8AAA2AAB1EFA00BC2B37 /* ViewController.swift */; };
+		5CFC8AAB2AAB1EFA00BC2B37 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFC8AAA2AAB1EFA00BC2B37 /* MainViewController.swift */; };
 		5CFC8AAE2AAB1EFA00BC2B37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CFC8AAC2AAB1EFA00BC2B37 /* Main.storyboard */; };
 		5CFC8AB02AAB1EFB00BC2B37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CFC8AAF2AAB1EFB00BC2B37 /* Assets.xcassets */; };
 		5CFC8AB32AAB1EFB00BC2B37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CFC8AB12AAB1EFB00BC2B37 /* LaunchScreen.storyboard */; };
-		5CFC8ABC2AAB1F0800BC2B37 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFC8ABB2AAB1F0800BC2B37 /* Observable.swift */; };
+		D110F7E3EE9D7DEFE91A192D /* Pods_MVVMBoxing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B757064A637E0FBBA33BD0C0 /* Pods_MVVMBoxing.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5C65B2A32AAB75B900A4446C /* PokeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeService.swift; sourceTree = "<group>"; };
-		5C95707C2AAB20040093DEF3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		5C5C3D602AAD59570084C3DC /* ServicesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesContainer.swift; sourceTree = "<group>"; };
+		5C65B2A32AAB75B900A4446C /* MoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
+		5C95707C2AAB20040093DEF3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		5CB89D892AAC25760017A2DE /* NetworkEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEndPoints.swift; sourceTree = "<group>"; };
 		5CB89D8F2AAC27C30017A2DE /* AppConfigurationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurationContainer.swift; sourceTree = "<group>"; };
 		5CFC8AA32AAB1EFA00BC2B37 /* MVVMBoxing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMBoxing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CFC8AA62AAB1EFA00BC2B37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CFC8AA82AAB1EFA00BC2B37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5CFC8AAA2AAB1EFA00BC2B37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5CFC8AAA2AAB1EFA00BC2B37 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5CFC8AAD2AAB1EFA00BC2B37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CFC8AAF2AAB1EFB00BC2B37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CFC8AB22AAB1EFB00BC2B37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CFC8AB42AAB1EFB00BC2B37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CFC8ABB2AAB1F0800BC2B37 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		659A268353FA60C6F1B1F8AF /* Pods-MVVMBoxing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMBoxing.release.xcconfig"; path = "Target Support Files/Pods-MVVMBoxing/Pods-MVVMBoxing.release.xcconfig"; sourceTree = "<group>"; };
+		7FD1BD9FF3EE456FAFB947E2 /* Pods-MVVMBoxing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMBoxing.debug.xcconfig"; path = "Target Support Files/Pods-MVVMBoxing/Pods-MVVMBoxing.debug.xcconfig"; sourceTree = "<group>"; };
+		B757064A637E0FBBA33BD0C0 /* Pods_MVVMBoxing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMBoxing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D110F7E3EE9D7DEFE91A192D /* Pods_MVVMBoxing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,14 +55,24 @@
 		29C96BF3394CCF4742074A4C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				7FD1BD9FF3EE456FAFB947E2 /* Pods-MVVMBoxing.debug.xcconfig */,
+				659A268353FA60C6F1B1F8AF /* Pods-MVVMBoxing.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		58FC5F2D671FFC468A5707D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B757064A637E0FBBA33BD0C0 /* Pods_MVVMBoxing.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5C65B2A22AAB75AC00A4446C /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				5CB89D872AAC107B0017A2DE /* PokeService */,
+				5CB89D872AAC107B0017A2DE /* MoviesService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -69,28 +84,28 @@
 			path = DataModels;
 			sourceTree = "<group>";
 		};
-		5C95707A2AAB1FF00093DEF3 /* ViewController */ = {
+		5C95707A2AAB1FF00093DEF3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5CFC8AAA2AAB1EFA00BC2B37 /* ViewController.swift */,
+				5CFC8AAA2AAB1EFA00BC2B37 /* MainViewController.swift */,
 			);
-			path = ViewController;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		5C95707B2AAB1FFC0093DEF3 /* ViewModel */ = {
+		5C95707B2AAB1FFC0093DEF3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				5C95707C2AAB20040093DEF3 /* ViewModel.swift */,
+				5C95707C2AAB20040093DEF3 /* MainViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		5CB89D872AAC107B0017A2DE /* PokeService */ = {
+		5CB89D872AAC107B0017A2DE /* MoviesService */ = {
 			isa = PBXGroup;
 			children = (
-				5C65B2A32AAB75B900A4446C /* PokeService.swift */,
+				5C65B2A32AAB75B900A4446C /* MoviesService.swift */,
 			);
-			path = PokeService;
+			path = MoviesService;
 			sourceTree = "<group>";
 		};
 		5CB89D882AAC25580017A2DE /* Constants */ = {
@@ -105,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				5CB89D8F2AAC27C30017A2DE /* AppConfigurationContainer.swift */,
+				5C5C3D602AAD59570084C3DC /* ServicesContainer.swift */,
 			);
 			path = DIContainers;
 			sourceTree = "<group>";
@@ -115,6 +131,7 @@
 				5CFC8AA52AAB1EFA00BC2B37 /* MVVMBoxing */,
 				5CFC8AA42AAB1EFA00BC2B37 /* Products */,
 				29C96BF3394CCF4742074A4C /* Pods */,
+				58FC5F2D671FFC468A5707D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,9 +150,9 @@
 				5CB89D882AAC25580017A2DE /* Constants */,
 				5C65B2A52AAB763100A4446C /* DataModels */,
 				5C65B2A22AAB75AC00A4446C /* Services */,
-				5C95707B2AAB1FFC0093DEF3 /* ViewModel */,
-				5C95707A2AAB1FF00093DEF3 /* ViewController */,
-				5CFC8ABA2AAB1F0100BC2B37 /* Model */,
+				5C95707B2AAB1FFC0093DEF3 /* ViewModels */,
+				5C95707A2AAB1FF00093DEF3 /* ViewControllers */,
+				5CFC8ABA2AAB1F0100BC2B37 /* DataModel */,
 				5CFC8AA62AAB1EFA00BC2B37 /* AppDelegate.swift */,
 				5CFC8AA82AAB1EFA00BC2B37 /* SceneDelegate.swift */,
 				5CFC8AAC2AAB1EFA00BC2B37 /* Main.storyboard */,
@@ -146,12 +163,11 @@
 			path = MVVMBoxing;
 			sourceTree = "<group>";
 		};
-		5CFC8ABA2AAB1F0100BC2B37 /* Model */ = {
+		5CFC8ABA2AAB1F0100BC2B37 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				5CFC8ABB2AAB1F0800BC2B37 /* Observable.swift */,
 			);
-			path = Model;
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CFC8AB72AAB1EFB00BC2B37 /* Build configuration list for PBXNativeTarget "MVVMBoxing" */;
 			buildPhases = (
+				169AC410E80C48DEA906F729 /* [CP] Check Pods Manifest.lock */,
 				5CFC8A9F2AAB1EFA00BC2B37 /* Sources */,
 				5CFC8AA02AAB1EFA00BC2B37 /* Frameworks */,
 				5CFC8AA12AAB1EFA00BC2B37 /* Resources */,
+				4F2CA16D9B98DDCD27C4EEB0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,16 +238,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		169AC410E80C48DEA906F729 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVVMBoxing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F2CA16D9B98DDCD27C4EEB0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVMBoxing/Pods-MVVMBoxing-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVMBoxing/Pods-MVVMBoxing-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVMBoxing/Pods-MVVMBoxing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5CFC8A9F2AAB1EFA00BC2B37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C95707D2AAB20040093DEF3 /* ViewModel.swift in Sources */,
-				5CFC8AAB2AAB1EFA00BC2B37 /* ViewController.swift in Sources */,
+				5C95707D2AAB20040093DEF3 /* MainViewModel.swift in Sources */,
+				5C5C3D612AAD59570084C3DC /* ServicesContainer.swift in Sources */,
+				5CFC8AAB2AAB1EFA00BC2B37 /* MainViewController.swift in Sources */,
 				5CB89D8A2AAC25760017A2DE /* NetworkEndPoints.swift in Sources */,
-				5C65B2A42AAB75B900A4446C /* PokeService.swift in Sources */,
-				5CFC8ABC2AAB1F0800BC2B37 /* Observable.swift in Sources */,
+				5C65B2A42AAB75B900A4446C /* MoviesService.swift in Sources */,
 				5CFC8AA72AAB1EFA00BC2B37 /* AppDelegate.swift in Sources */,
 				5CB89D902AAC27C30017A2DE /* AppConfigurationContainer.swift in Sources */,
 				5CFC8AA92AAB1EFA00BC2B37 /* SceneDelegate.swift in Sources */,
@@ -374,6 +434,7 @@
 		};
 		5CFC8AB82AAB1EFB00BC2B37 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FD1BD9FF3EE456FAFB947E2 /* Pods-MVVMBoxing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -405,6 +466,7 @@
 		};
 		5CFC8AB92AAB1EFB00BC2B37 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 659A268353FA60C6F1B1F8AF /* Pods-MVVMBoxing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

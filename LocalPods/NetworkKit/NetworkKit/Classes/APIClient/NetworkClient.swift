@@ -1,19 +1,24 @@
-import Alamofire
 import FoundationKit
+
+public typealias HTTPHeaders = [String: String]
+
+public enum HTTPMethod: String {
+    case get = "GET"
+}
 
 public protocol NetworkClient {
     func request<Response: Decodable>(
         url: URL,
         method: HTTPMethod,
-        headers: [HTTPHeader],
-        parameters: [String : Any]
+        headers: HTTPHeaders?,
+        parameters: [String : Any]?
     ) async throws -> Response
 }
 
 extension NetworkClient {
     public func get<Response: Decodable>(
         url: URL,
-        headers: [HTTPHeader] = []
+        headers: HTTPHeaders? = nil
     ) async throws -> Response {
         try await self.request(url: url, method: .get, headers: headers, parameters: [:])
     }
@@ -34,16 +39,24 @@ public final class DefaultNetworkClient: NetworkClient {
     public func request<Response>(
         url: URL,
         method: HTTPMethod,
-        headers: [HTTPHeader],
-        parameters: [String : Any])
+        headers: HTTPHeaders?,
+        parameters: [String : Any]?)
     async throws -> Response where Response : Decodable {
-        let request = try URLRequest(url: url, method: method, headers: .init(headers))
+        let request = URLRequest(url: url, method: method, headers: headers)
         
         let (data, response) = try await session.data(for: request)
         guard let response = response as? HTTPURLResponse else { throw "Invalid response from server" }
+        print("response: \(response)")
         guard response.statusCode == 200 else {
             throw "Error encountered. Status code \(response.statusCode)"
         }
+
+        guard let json = data.toJson else {
+            throw "Error encountered. Invalid response"
+        }
+        
+        print("json: \(String(describing: json))")
+        
         return try jsonDecoder.decode(Response.self, from: data)
     }
 }

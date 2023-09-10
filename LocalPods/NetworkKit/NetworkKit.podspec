@@ -11,7 +11,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
 
   s.source_files = 'NetworkKit/Classes/**/*'
-  s.dependency 'Alamofire'
   s.dependency 'FoundationKit'
   
   s.test_spec 'Tests' do |test_spec|

@@ -9,22 +9,23 @@ import Factory
 import FoundationKit
 
 protocol NetworkEndPointsProvider {
-    var pokeSearch: String { get }
+    var search: String { get }
 }
 
-final class DefaultNetworkEndPointsProvider {
+enum DefaultNetworkEndPointsProvider: NetworkEndPointsProvider {
+    case common
+    
+    private var host: String {
+        switch Self.appConfigurator.currentConfiguration {
+        case .debug: return "https://api.themoviedb.org"
+        case .release: return "https://api.themoviedb.org"
+        }
+    }
     
     @LazyInjected(\AppConfiguratorContainer.appConfigurator)
-    private var appConfigurator: AppConfigurator
+    private static var appConfigurator: AppConfigurator 
     
-//    init() {
-//        self.appConfigurator = appConfigurator
-//    }
-    
-    var pokeSearch: String {
-        switch appConfigurator.currentConfiguration {
-        case .debug: return "https://pokeapi.co/api/v2/pokemon/"
-        case .release: return "https://pokeapi.co/api/v2/pokemon/"
-        }
+    var search: String {
+        host.appending("/3/search/movie")
     }
 }

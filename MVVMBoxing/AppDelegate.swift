@@ -11,13 +11,30 @@ import NetworkKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var service = DefaultMoviesService.init()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         registerAppConfiguration()
-
-        let configurator1 = AppConfiguratorContainer.shared.appConfigurator()
         
+        
+        
+        Task.detached {
+            async let response = self.service.search(movieName: "Once upon")
+            
+            do {
+                let data = try await response
+                print("Response data: \(data)")
+            } catch {
+                print("Error: \(error.localizedDescription)")
+            }
+            
+            
+            
+            
+        }
         return true
     }
     

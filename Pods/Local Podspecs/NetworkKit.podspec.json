@@ -1,0 +1,33 @@
+{
+  "name": "NetworkKit",
+  "version": "0.1.0",
+  "summary": "A short description of NetworkKit.",
+  "homepage": "https://github.com/Mike Cap/NetworkKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Mike Cap": "hoangelec@icloud.com"
+  },
+  "source": {
+    "git": "https://github.com/Mike Cap/NetworkKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "source_files": "NetworkKit/Classes/**/*",
+  "dependencies": {
+    "FoundationKit": [
+
+    ]
+  },
+  "testspecs": [
+    {
+      "name": "Tests",
+      "test_type": "unit",
+      "source_files": "Tests/**/*"
+    }
+  ]
+}
