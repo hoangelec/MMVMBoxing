@@ -27,8 +27,7 @@ target 'MVVMBoxing' do
 
   pod 'SnapKit'
   pod "Factory"
-
-  use_local_pod('FoundationKit')
-  use_local_pod('NetworkKit')
+  use_local_pod('FoundationKit', test_specs: ['Tests'])
+  use_local_pod('NetworkKit', test_specs: ['Tests'])
   
 end

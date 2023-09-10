@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FoundationKit-Unit-Tests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+		</dict>
 		<key>FoundationKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>

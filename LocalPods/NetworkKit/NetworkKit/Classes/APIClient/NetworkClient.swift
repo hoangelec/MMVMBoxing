@@ -28,10 +28,10 @@ public final class DefaultNetworkClient: NetworkClient {
     
     public static let shared = DefaultNetworkClient()
     
-    private let jsonDecoder: JSONDecoder
-    private let session: URLSession
+    private let jsonDecoder: ModelDecoder
+    private let session: NetworkingSession
     
-    init(jsonDecoder: JSONDecoder = .init(), session: URLSession = .shared) {
+    init(jsonDecoder: ModelDecoder = JSONDecoder(), session: NetworkingSession = URLSession.shared) {
         self.jsonDecoder = jsonDecoder
         self.session = session
     }
@@ -49,8 +49,6 @@ public final class DefaultNetworkClient: NetworkClient {
         guard response.statusCode == 200 else {
             throw "Error encountered. Status code \(response.statusCode)"
         }
-        
-//        print("\(data.toJson)")
         
         return try jsonDecoder.decode(Response.self, from: data)
     }

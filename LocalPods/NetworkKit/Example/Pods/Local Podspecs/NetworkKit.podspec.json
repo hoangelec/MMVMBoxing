@@ -19,10 +19,10 @@
   },
   "source_files": "NetworkKit/Classes/**/*",
   "dependencies": {
-    "Alamofire": [
+    "FoundationKit": [
 
     ],
-    "FoundationKit": [
+    "Factory": [
 
     ]
   },

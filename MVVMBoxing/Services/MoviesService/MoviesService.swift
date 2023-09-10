@@ -23,16 +23,13 @@ final class DefaultMoviesService: MoviesService {
     
     private let networkClient: NetworkClient
     private let endpointProvider: NetworkEndPointsProvider
-    private let queue: Dispatcher
     
     init(
         networkClient: NetworkClient = DefaultNetworkClient.shared,
-        endpointProvider: NetworkEndPointsProvider = DefaultNetworkEndPointsProvider.common,
-        queue: Dispatcher = DispatchQueue(label: "com.mvvmboxing.DefaultMoviesService")
+        endpointProvider: NetworkEndPointsProvider = DefaultNetworkEndPointsProvider.common
     ) {
         self.networkClient = networkClient
         self.endpointProvider = endpointProvider
-        self.queue = queue
     }
     
     func search(movieName: String) async throws -> [Movie] {
