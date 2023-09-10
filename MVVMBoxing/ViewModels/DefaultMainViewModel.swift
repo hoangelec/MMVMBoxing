@@ -9,19 +9,36 @@
 import Combine
 import Factory
 
-class MainViewModel {
+protocol MainViewModel {
+    var searchResult: [Movie]? { get }
+    func scheduleSearch(keyword: String)
+}
+
+
+final class DefaultMainViewModel {
     
-    @Published var searchResult: PokemonNameSearchResponse?
+    @Published var searchResult: [Movie]?
     
-    private var previousTask: Task<PokemonNameSearchResponse, Error>?
+    private var previousTask: Task<Movie, Error>?
     
-    @LazyInjected(\ServicesContainer.pokeService)
+    @LazyInjected(\ServicesContainer.moviesService)
     private var service: MoviesService
     
-    func scheduleSearch(keyword: String) async throws -> PokemonNameSearchResponse {
-        return try await service.search(movieName: keyword)
+    func scheduleSearch(keyword: String) {
+        guard keyword.count > 3 else { return }
+        
+        Task.detached { [self] in
+            print("Schedule search for: \(keyword)")
+            do {
+                let movies = try await service.search(movieName: keyword)
+                searchResult = movies
+            } catch {
+                print(error)
+            }
+            
+        }
+        
     }
-    
     
 //    var timer: Timer?
 //    //  let service = FakeService()
@@ -30,7 +47,8 @@ class MainViewModel {
 //
 //    let debounceTime = 0.25
 //    var lastKeyword = ""
-    func scheduleSearch(keyword: String, completion: @escaping (Result<[String], Error>) -> Void) {
+//    func scheduleSearch(keyword: String, completion: @escaping (Result<[String], Error>) -> Void) {
+        
 //        timer?.invalidate()
 //        timer = nil
 //        guard !keyword.isEmpty else {
@@ -55,5 +73,5 @@ class MainViewModel {
 //            }
 //            self.timer = nil
 //        })
-    }
+//    }
 }

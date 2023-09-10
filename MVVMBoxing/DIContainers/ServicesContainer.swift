@@ -12,7 +12,7 @@ final class ServicesContainer: SharedContainer {
     static var shared = ServicesContainer()
     var manager = ContainerManager()
     
-    var pokeService: Factory<MoviesService> {
+    var moviesService: Factory<MoviesService> {
         self { DefaultMoviesService() }.singleton
     }
 }

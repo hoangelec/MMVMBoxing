@@ -9,9 +9,10 @@ import UIKit
 import SnapKit
 import Combine
 
+@MainActor
 class MainViewController: UIViewController {
     
-    private let viewModel = MainViewModel()
+    private let viewModel = DefaultMainViewModel()
     
     private lazy var searchBar = {
         let searchBar = UISearchBar(frame: .zero)
@@ -50,7 +51,7 @@ class MainViewController: UIViewController {
     private var bindings = [AnyCancellable]()
     private func setupBinding() {
          let searchResultBinding = viewModel.$searchResult.sink {
-            print("search result: \($0)")
+            print("searchut: \($0)")
         }
         
         bindings.append(searchResultBinding)
@@ -60,6 +61,7 @@ class MainViewController: UIViewController {
 extension MainViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
+        viewModel.scheduleSearch(keyword: searchText)
     }
 }
  

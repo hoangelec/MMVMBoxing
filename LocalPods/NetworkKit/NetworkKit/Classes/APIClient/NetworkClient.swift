@@ -46,16 +46,11 @@ public final class DefaultNetworkClient: NetworkClient {
         
         let (data, response) = try await session.data(for: request)
         guard let response = response as? HTTPURLResponse else { throw "Invalid response from server" }
-        print("response: \(response)")
         guard response.statusCode == 200 else {
             throw "Error encountered. Status code \(response.statusCode)"
         }
-
-        guard let json = data.toJson else {
-            throw "Error encountered. Invalid response"
-        }
         
-        print("json: \(String(describing: json))")
+//        print("\(data.toJson)")
         
         return try jsonDecoder.decode(Response.self, from: data)
     }

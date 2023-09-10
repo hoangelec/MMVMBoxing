@@ -18,23 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         registerAppConfiguration()
-        
-        
-        
-        Task.detached {
-            async let response = self.service.search(movieName: "Once upon")
-            
-            do {
-                let data = try await response
-                print("Response data: \(data)")
-            } catch {
-                print("Error: \(error.localizedDescription)")
-            }
-            
-            
-            
-            
-        }
         return true
     }
     

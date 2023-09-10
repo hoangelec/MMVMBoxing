@@ -6,57 +6,43 @@
 //
 
 import NetworkKit
-
-struct PokemonNameSearchResponse: Decodable {
-    struct Sprite: Decodable {
-        struct Other: Decodable {
-            struct Home: Decodable {
-                var frontDefault: String
-                
-                enum CodingKeys: String, CodingKey {
-                        case frontDefault = "front_default"
-                }
-            }
-            
-            var home: Home
-        }
-        var other: Other
-    }
-    var name: String
-    var height: Int
-    var weight: Int
-    var sprites: Sprite
-    
-    var imageUrl: String { sprites.other.home.frontDefault }
-}
+import FoundationKit
 
 protocol MoviesService {
-    func search(movieName: String) async throws -> PokemonNameSearchResponse
+    func search(movieName: String) async throws -> [Movie]
+}
+
+extension DefaultMoviesService {
+    struct Response: Decodable {
+        var results: [Movie]
+    }
 }
 
 final class DefaultMoviesService: MoviesService {
-    
     private static let apiKey = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYzAxYjM5NWZhOWQyNzRiZDdiNzdjNzk1MzQ5MzhmOSIsInN1YiI6IjY0ZmQyNjBhNjY0NjlhMDBjNjdiNmNjZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.VDeEcnVHZN6_o9ScmKnwfCZcd2YnC2n29obpFLNQukE"
     
     private let networkClient: NetworkClient
     private let endpointProvider: NetworkEndPointsProvider
+    private let queue: Dispatcher
     
     init(
         networkClient: NetworkClient = DefaultNetworkClient.shared,
-        endpointProvider: NetworkEndPointsProvider = DefaultNetworkEndPointsProvider.common
+        endpointProvider: NetworkEndPointsProvider = DefaultNetworkEndPointsProvider.common,
+        queue: Dispatcher = DispatchQueue(label: "com.mvvmboxing.DefaultMoviesService")
     ) {
         self.networkClient = networkClient
         self.endpointProvider = endpointProvider
+        self.queue = queue
     }
     
-    func search(movieName: String) async throws -> PokemonNameSearchResponse {
+    func search(movieName: String) async throws -> [Movie] {
         guard let url = URL(string: endpointProvider.search)?
             .appendingQueryItem(name: "query", value: movieName) else {
             throw "Could not construct url for search request"
         }
-        
         let headers: [String: String] = ["Authorization" : "Bearer \(Self.apiKey)"]
+        let response: DefaultMoviesService.Response = try await networkClient.get(url: url, headers: headers)
         
-        return try await networkClient.get(url: url, headers: headers)
+        return response.results
     }
 }
