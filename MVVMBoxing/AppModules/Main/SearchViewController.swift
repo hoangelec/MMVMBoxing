@@ -10,9 +10,9 @@ import SnapKit
 import Combine
 
 @MainActor
-class MainViewController: UIViewController {
+class SearchViewController: UIViewController {
     
-    private let viewModel = DefaultMainViewModel()
+    private let viewModel: DefaultSearchviewModel
     
     private lazy var searchBar = {
         let searchBar = UISearchBar(frame: .zero)
@@ -32,6 +32,15 @@ class MainViewController: UIViewController {
         
         return tableView
     }()
+    
+    init(viewModel: DefaultSearchviewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,13 +81,13 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: UISearchBarDelegate {
+extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel.scheduleSearch(keyword: searchText)
     }
 }
  
-extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.searchResult.count
     }

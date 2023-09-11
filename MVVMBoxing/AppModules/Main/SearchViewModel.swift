@@ -9,13 +9,13 @@
 import Combine
 import Factory
 
-protocol MainViewModel {
+protocol SearchViewModel {
     var searchResult: [Movie] { get }
     func scheduleSearch(keyword: String)
     func buildCellViewModel(at index: Int) async -> MovieSearchResultViewModel
 }
 
-final class DefaultMainViewModel: MainViewModel {
+final class DefaultSearchviewModel: SearchViewModel {
     func buildCellViewModel(at index: Int) async -> MovieSearchResultViewModel {
         DefaultMovieSearchResultViewModel(movie: await self.searchResult[index])
     }

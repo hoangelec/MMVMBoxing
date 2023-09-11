@@ -1,0 +1,8 @@
+sources:
+  - ../MVVMBoxing
+templates:
+  - ./SourceryTemplates/AutoMockable.stencil
+output:
+  ../MVVMBoxingTests/GeneratedMocks/
+args:
+  autoMockableTestableImports: ["MVVMBoxing"]

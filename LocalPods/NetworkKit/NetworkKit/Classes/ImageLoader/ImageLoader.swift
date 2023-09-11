@@ -8,6 +8,7 @@
 import Foundation
 import FoundationKit
 
+//sourcery: AutoMockable
 public protocol ImageLoader {
     func loadImage(from url: URL) async throws -> UIImage
 }

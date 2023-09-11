@@ -44,7 +44,7 @@ class DefaultMovieSearchResultViewModel: MovieSearchResultViewModel {
         guard let posterUrl = movie.posterUrl else { return }
         Task {
             let image = try? await imageLoader.loadImage(from: posterUrl)
-            await MainActor.run {
+            uiQueue.async {
                 completion(image)
             }
         }

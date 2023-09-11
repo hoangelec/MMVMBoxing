@@ -12,12 +12,21 @@ import NetworkKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var service = DefaultMoviesService.init()
+    var window: UIWindow?
+    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         registerAppConfiguration()
+        
+        let viewController = SearchViewController(viewModel: .init())
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = viewController
+        
+        window?.makeKeyAndVisible()
+        
         return true
     }
     
