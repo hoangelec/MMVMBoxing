@@ -17,7 +17,7 @@
 		<key>NetworkKit-Unit-Tests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>NetworkKit.xcscheme</key>
 		<dict>

@@ -171,6 +171,7 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				2A0ECF9BDA544F2070BF6C20 /* [CP] Embed Pods Frameworks */,
+				5C80E0822AAEE8D6000AFD52 /* Sourcery */,
 			);
 			buildRules = (
 			);
@@ -283,6 +284,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NetworkKit_Example/Pods-NetworkKit_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		5C80E0822AAEE8D6000AFD52 /* Sourcery */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Sourcery;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "Scripts/sourcery.sh\n";
 		};
 		A27F301AEA307D03E7F563AA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

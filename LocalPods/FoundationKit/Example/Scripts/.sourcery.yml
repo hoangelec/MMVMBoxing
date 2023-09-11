@@ -1,0 +1,7 @@
+sources:
+  - ../../FoundationKit/Classes/
+  - ../../FoundationKit/Classes/
+templates:
+  - ./SourceryTemplates/AutoMockable.stencil
+output:
+  ../../FoundationKit/Tests/Mocks

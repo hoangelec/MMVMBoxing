@@ -9,7 +9,6 @@ PODS:
     - FoundationKit
 
 DEPENDENCIES:
-  - Factory
   - FoundationKit (from `../../FoundationKit`)
   - NetworkKit (from `../`)
   - NetworkKit/Tests (from `../`)
@@ -29,6 +28,6 @@ SPEC CHECKSUMS:
   FoundationKit: 45c02ba2c33004d8093fa826552992149649479a
   NetworkKit: 55e5fae1d6588a0cf0e5a8501acf15247c878f5b
 
-PODFILE CHECKSUM: f2cd7cddfaa3a215cf948ce2c0a9ce09d9dd1b19
+PODFILE CHECKSUM: c653cdd7fdfc7992b106e71c40783db3490f3efe
 
 COCOAPODS: 1.12.1

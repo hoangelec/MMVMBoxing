@@ -3,6 +3,10 @@ PODS:
   - FoundationKit (0.1.0)
   - FoundationKit/Tests (0.1.0)
   - NetworkKit (0.1.0):
+    - Factory
+    - FoundationKit
+  - NetworkKit/Tests (0.1.0):
+    - Factory
     - FoundationKit
   - SnapKit (5.6.0)
 
@@ -11,6 +15,7 @@ DEPENDENCIES:
   - FoundationKit (from `LocalPods/FoundationKit`)
   - FoundationKit/Tests (from `LocalPods/FoundationKit`)
   - NetworkKit (from `LocalPods/NetworkKit`)
+  - NetworkKit/Tests (from `LocalPods/NetworkKit`)
   - SnapKit
 
 SPEC REPOS:
@@ -27,9 +32,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Factory: ec9527abfa59ddf2a1b024914b1e380f616f9e03
   FoundationKit: 45c02ba2c33004d8093fa826552992149649479a
-  NetworkKit: b66701d6293d7dbba8b013624add069bca048fa8
+  NetworkKit: 55e5fae1d6588a0cf0e5a8501acf15247c878f5b
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: ccc2bc2bd6d26a9e0b487710abf464905f48a106
+PODFILE CHECKSUM: a2a5ec462dda1b4502a18a9da1376bd8a4757c0b
 
 COCOAPODS: 1.12.1

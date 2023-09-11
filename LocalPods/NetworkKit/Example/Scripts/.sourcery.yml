@@ -1,0 +1,6 @@
+sources:
+  - ../../NetworkKit/Classes/
+templates:
+  - ./SourceryTemplates/AutoMockable.stencil
+output:
+  ../../Tests/GeneratedMocks/

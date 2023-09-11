@@ -1,0 +1,35 @@
+{
+  "configurations" : [
+    {
+      "id" : "26D2468B-D248-448E-864C-66C8E2AACF2A",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:MVVMBoxing.xcodeproj",
+      "identifier" : "5CFC8AA22AAB1EFA00BC2B37",
+      "name" : "MVVMBoxing"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Pods\/Pods.xcodeproj",
+        "identifier" : "FE9802C005BF4E7FCD7F7C91F2C67111",
+        "name" : "FoundationKit-Unit-Tests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Pods\/Pods.xcodeproj",
+        "identifier" : "ABABA357D25F383B5ECC38F879400177",
+        "name" : "NetworkKit-Unit-Tests"
+      }
+    }
+  ],
+  "version" : 1
+}
