@@ -14,14 +14,8 @@ Pod::Spec.new do |s|
   s.dependency 'FoundationKit'
   s.dependency 'Factory'
   
-  s.script_phases = [
-  { :name => 'Sourcery',
-    :script => '${PROJECT_DIR}/../Scripts/sourcery.sh',
-    :execution_position => :before_compile
-  }
-    ]
-  
   s.test_spec 'Tests' do |test_spec|
     test_spec.source_files = 'Tests/**/*'
   end
 end
+    

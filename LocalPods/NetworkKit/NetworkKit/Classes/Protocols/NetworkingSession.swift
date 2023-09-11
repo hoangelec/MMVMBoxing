@@ -11,3 +11,8 @@ public protocol NetworkingSession {
 }
 
 extension URLSession: NetworkingSession {}
+
+//sourcery: AutoMockable
+public protocol RandomProtocol {
+    func doSomething(with argument: String)
+}

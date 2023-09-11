@@ -10,18 +10,7 @@ import UIKit
 import AppKit
 #endif
 
-
-
-
-
-
-
-
-
-
-
-
-
+@testable import NetworkKit
 
 
 
@@ -65,4 +54,24 @@ public class NetworkingSessionMock: NetworkingSession {
         }
     }
 
+}
+public class RandomProtocolMock: RandomProtocol {
+
+    public init() {}
+    //MARK: - doSomething
+
+    public var doSomethingWithCallsCount = 0
+    public var doSomethingWithCalled: Bool {
+        return doSomethingWithCallsCount > 0
+    }
+    public var doSomethingWithReceivedArgument: (String)?
+    public var doSomethingWithReceivedInvocations: [(String)] = []
+    public var doSomethingWithClosure: ((String) -> Void)?
+
+    public func doSomething(with argument: String) {
+        doSomethingWithCallsCount += 1
+        doSomethingWithReceivedArgument = argument
+        doSomethingWithReceivedInvocations.append(argument)
+        doSomethingWithClosure?(argument)
+    }
 }

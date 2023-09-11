@@ -4,3 +4,5 @@ templates:
   - ./SourceryTemplates/AutoMockable.stencil
 output:
   ../../Tests/GeneratedMocks/
+args:
+  autoMockableTestableImports: ["NetworkKit"]

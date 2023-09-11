@@ -18,19 +18,10 @@ final class DecoderMock: ModelDecoder {
     }
 }
 
-final class NetworkignSessionMock: NetworkingSession {
-    var fakeReponse: (Data, URLResponse)?
-
-    func data(for request: URLRequest) async throws -> (Data, URLResponse) {
-        guard let fakeReponse else { throw "Fake error" }
-        return fakeReponse
-    }
-}
-
 class DefaultNetworkClientTests: XCTestCase {
     var sut: DefaultNetworkClient!
     var decoder: DecoderMock!
-    var session: NetworkignSessionMock!
+    var session: NetworkingSessionMock!
     let testUrl = URL(string: "google.com.vn")!
     
     override  func setUp() {
@@ -42,7 +33,7 @@ class DefaultNetworkClientTests: XCTestCase {
         
     func testRequest_sessionThrowsError() async throws {
         // given
-        session.fakeReponse = nil
+        session.dataForThrowableError = "Fake error"
         
         // when
         var expectedError: Error?
@@ -58,7 +49,7 @@ class DefaultNetworkClientTests: XCTestCase {
     
     func testRequest_invalidResponseStatusCode() async throws {
         // given
-        session.fakeReponse = (Data(), HTTPURLResponse.init(url: testUrl, statusCode: 401, httpVersion: nil, headerFields: nil)!)
+        session.dataForReturnValue = (Data(), HTTPURLResponse.init(url: .init(string: "www.google.com")!, statusCode: 401, httpVersion: nil, headerFields: nil)!)
         
         // when
         var expectedError: Error?
