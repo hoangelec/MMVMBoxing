@@ -31,7 +31,6 @@ class SearchViewController: UIViewController {
             forCellReuseIdentifier: MovieSearchResultTableViewCell.reuseIdentifier
         )
         
-        
         return tableView
     }()
     
@@ -66,16 +65,13 @@ class SearchViewController: UIViewController {
             make.trailingMargin.equalToSuperview()
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
-
     }
     
     private var bindings = [AnyCancellable]()
     private func setupBinding() {
-        let searchResultBinding = viewModel.$searchResult.receive(on: DispatchQueue.main).sink { [weak self] _ in
+        viewModel.$searchResult.receive(on: DispatchQueue.main).sink { [weak self] _ in
              self?.tableView.reloadData()
-        }
-        
-        bindings.append(searchResultBinding)
+        }.store(in: &bindings)
     }
     
     deinit {
@@ -105,8 +101,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             }
             return cell
         }
-        let cell = MovieSearchResultTableViewCell()
-        return cell
+        
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

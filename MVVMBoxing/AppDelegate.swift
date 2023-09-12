@@ -25,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coordinator = SearchModuleBuilder().build()
         
         window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // coordinator?.start() will setup the view hierarchy for Search feature
+        // and then assign the navigation controller to the window's rootVC
         window?.rootViewController = coordinator?.start()
         
         window?.makeKeyAndVisible()

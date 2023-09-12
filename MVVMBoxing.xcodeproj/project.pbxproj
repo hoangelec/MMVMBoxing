@@ -101,9 +101,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5C590BAB2AB07FA900216615 /* SomeOtherPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SomeOtherPage;
+			sourceTree = "<group>";
+		};
 		5C5C3D692AADA6910084C3DC /* AppModules */ = {
 			isa = PBXGroup;
 			children = (
+				5C590BAB2AB07FA900216615 /* SomeOtherPage */,
 				5C5C3D6A2AADA7410084C3DC /* Search */,
 			);
 			path = AppModules;
@@ -149,6 +157,7 @@
 		5C65B2A52AAB763100A4446C /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
+				5C5C3D672AAD8D460084C3DC /* Movie.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -161,12 +170,12 @@
 			path = MoviesService;
 			sourceTree = "<group>";
 		};
-		5CB89D882AAC25580017A2DE /* Constants */ = {
+		5CB89D882AAC25580017A2DE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				5CB89D892AAC25760017A2DE /* NetworkEndPoints.swift */,
 			);
-			path = Constants;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		5CB89D8E2AAC27B60017A2DE /* DIContainers */ = {
@@ -221,10 +230,9 @@
 				5CDC45792AAF6280001E6FB4 /* Coordinators */,
 				5C5C3D692AADA6910084C3DC /* AppModules */,
 				5CB89D8E2AAC27B60017A2DE /* DIContainers */,
-				5CB89D882AAC25580017A2DE /* Constants */,
+				5CB89D882AAC25580017A2DE /* Utilities */,
 				5C65B2A52AAB763100A4446C /* DataModels */,
 				5C65B2A22AAB75AC00A4446C /* Services */,
-				5CFC8ABA2AAB1F0100BC2B37 /* DataModel */,
 				5CFC8AA62AAB1EFA00BC2B37 /* AppDelegate.swift */,
 				5CFC8AAC2AAB1EFA00BC2B37 /* Main.storyboard */,
 				5CFC8AAF2AAB1EFB00BC2B37 /* Assets.xcassets */,
@@ -232,14 +240,6 @@
 				5CFC8AB42AAB1EFB00BC2B37 /* Info.plist */,
 			);
 			path = MVVMBoxing;
-			sourceTree = "<group>";
-		};
-		5CFC8ABA2AAB1F0100BC2B37 /* DataModel */ = {
-			isa = PBXGroup;
-			children = (
-				5C5C3D672AAD8D460084C3DC /* Movie.swift */,
-			);
-			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

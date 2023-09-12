@@ -16,10 +16,6 @@ protocol SearchViewModel {
 }
 
 final class DefaultSearchviewModel: SearchViewModel {
-    func buildCellViewModel(at index: Int) async -> MovieSearchResultViewModel {
-        DefaultMovieSearchResultViewModel(movie: await self.searchResult[index])
-    }
-    
     @MainActor @Published var searchResult: [Movie] = []
     
     private var previousTask: Task<Void, Error>?
@@ -27,7 +23,7 @@ final class DefaultSearchviewModel: SearchViewModel {
     private var bindings = [AnyCancellable]()
     
     @LazyInjected(\ServicesContainer.moviesService)
-    private var service: MoviesService
+    private var service: MoviesService //  `service` is injected at runtime, we don't need explicitly write DI code in its initialization
     
     func scheduleSearch(keyword: String) {
         previousTask?.cancel()
@@ -51,5 +47,9 @@ final class DefaultSearchviewModel: SearchViewModel {
                 print(error)
             }
         }
+    }
+    
+    func buildCellViewModel(at index: Int) async -> MovieSearchResultViewModel {
+        DefaultMovieSearchResultViewModel(movie: await self.searchResult[index])
     }
 }
