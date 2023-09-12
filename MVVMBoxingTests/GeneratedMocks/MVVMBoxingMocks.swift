@@ -1,5 +1,6 @@
 // Generated using Sourcery 2.0.3 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
+
 // swiftlint:disable line_length
 // swiftlint:disable variable_name
 
@@ -23,10 +24,16 @@ class CoordinatorMock: Coordinator {
     var startCalled: Bool {
         return startCallsCount > 0
     }
-    var startClosure: (() -> Void)?
-    func start() {
+    var startReturnValue: UIViewController!
+    var startClosure: (() -> UIViewController)?
+    @discardableResult
+    func start() -> UIViewController {
         startCallsCount += 1
-        startClosure?()
+        if let startClosure = startClosure {
+            return startClosure()
+        } else {
+            return startReturnValue
+        }
     }
 
 }

@@ -9,5 +9,5 @@ import UIKit
 
 //sourcery: AutoMockable
 protocol Coordinator: AnyObject {
-    func start()
+    @discardableResult func start() -> UIViewController
 }

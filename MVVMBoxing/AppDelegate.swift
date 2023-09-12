@@ -14,16 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
+    private var coordinator: Coordinator?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         registerAppConfiguration()
         
-        let viewController = SearchViewController(viewModel: .init())
+        // We can abstract the builder to make this testable later
+        coordinator = SearchModuleBuilder().build()
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = viewController
+        window?.rootViewController = coordinator?.start()
         
         window?.makeKeyAndVisible()
         

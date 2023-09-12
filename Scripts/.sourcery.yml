@@ -3,6 +3,6 @@ sources:
 templates:
   - ./SourceryTemplates/AutoMockable.stencil
 output:
-  ../MVVMBoxingTests/GeneratedMocks/
+  ../MVVMBoxingTests/GeneratedMocks/MVVMBoxingMocks.swift
 args:
   autoMockableTestableImports: ["MVVMBoxing"]

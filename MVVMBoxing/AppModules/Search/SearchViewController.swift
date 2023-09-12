@@ -49,7 +49,7 @@ class SearchViewController: UIViewController {
     }
     
     private func setupUI() {
-        title = "Poke search"
+        title = "Search"
         view.addSubview(searchBar)
         
         searchBar.snp.makeConstraints { make in

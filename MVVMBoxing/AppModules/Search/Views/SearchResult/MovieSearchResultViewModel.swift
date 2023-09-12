@@ -42,7 +42,7 @@ class DefaultMovieSearchResultViewModel: MovieSearchResultViewModel {
     
     func loadImage(completion: @escaping (UIImage?) -> Void) {
         guard let posterUrl = movie.posterUrl else { return }
-        Task {
+        Task { // Can do try catch here to handle error network load
             let image = try? await imageLoader.loadImage(from: posterUrl)
             uiQueue.async {
                 completion(image)
