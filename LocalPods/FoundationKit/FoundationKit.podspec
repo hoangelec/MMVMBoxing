@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/Mike Cap/FoundationKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Mike Cap' => 'hoangelec@icloud.com' }
-  s.source           = { :git => 'https://github.com/Mike Cap/FoundationKit.git', :tag => s.version.to_s }s
+  s.source           = { :git => 'https://github.com/Mike Cap/FoundationKit.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '13.0'
 
