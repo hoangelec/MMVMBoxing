@@ -110,6 +110,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let movie = viewModel.searchResult[indexPath.row]
         self.coordinator?.showDetails(for: movie)
     }

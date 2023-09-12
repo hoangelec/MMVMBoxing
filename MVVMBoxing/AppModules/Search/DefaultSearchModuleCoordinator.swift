@@ -27,7 +27,11 @@ final class DefaultSearchModuleCoordinator: SearchModuleCoordinator {
     }
     
     func showDetails(for movie: Movie) {
-        print("Movie selected: \(movie)")
+        let alert = UIAlertController(title: "\(movie.title)", message: ")\(movie.overview)", preferredStyle: .alert)
+        
+        alert.addAction(.init(title: "Dismiss", style: .cancel))
+        
+        navigationController.present(alert, animated: true)
     }
 }
 
