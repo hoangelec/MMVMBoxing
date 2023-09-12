@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C590BA82AB008BF00216615 /* MVVMBoxingMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C590BA72AB008BF00216615 /* MVVMBoxingMocks.swift */; };
+		5C590BAA2AB0099A00216615 /* DefaultSearchModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C590BA92AB0099A00216615 /* DefaultSearchModuleCoordinator.swift */; };
 		5C5C3D612AAD59570084C3DC /* ServicesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5C3D602AAD59570084C3DC /* ServicesContainer.swift */; };
 		5C5C3D682AAD8D460084C3DC /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5C3D672AAD8D460084C3DC /* Movie.swift */; };
 		5C5C3D6F2AADA7B80084C3DC /* MovieSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5C3D6E2AADA7B80084C3DC /* MovieSearchResultTableViewCell.swift */; };
@@ -18,7 +20,6 @@
 		5CB89D902AAC27C30017A2DE /* AppConfigurationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB89D8F2AAC27C30017A2DE /* AppConfigurationContainer.swift */; };
 		5CDC457B2AAF628B001E6FB4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC457A2AAF628B001E6FB4 /* Coordinator.swift */; };
 		5CDC45832AAF67A4001E6FB4 /* MVVMBoxingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC45822AAF67A4001E6FB4 /* MVVMBoxingTests.swift */; };
-		5CDC458C2AAF6A43001E6FB4 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC458B2AAF6A43001E6FB4 /* AutoMockable.generated.swift */; };
 		5CFC8AA72AAB1EFA00BC2B37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFC8AA62AAB1EFA00BC2B37 /* AppDelegate.swift */; };
 		5CFC8AAB2AAB1EFA00BC2B37 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFC8AAA2AAB1EFA00BC2B37 /* SearchViewController.swift */; };
 		5CFC8AAE2AAB1EFA00BC2B37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CFC8AAC2AAB1EFA00BC2B37 /* Main.storyboard */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C590BA72AB008BF00216615 /* MVVMBoxingMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MVVMBoxingMocks.swift; path = GeneratedMocks/MVVMBoxingMocks.swift; sourceTree = "<group>"; };
+		5C590BA92AB0099A00216615 /* DefaultSearchModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSearchModuleCoordinator.swift; sourceTree = "<group>"; };
 		5C5C3D602AAD59570084C3DC /* ServicesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesContainer.swift; sourceTree = "<group>"; };
 		5C5C3D672AAD8D460084C3DC /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		5C5C3D6E2AADA7B80084C3DC /* MovieSearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchResultTableViewCell.swift; sourceTree = "<group>"; };
@@ -50,7 +53,6 @@
 		5CDC457A2AAF628B001E6FB4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		5CDC45802AAF67A4001E6FB4 /* MVVMBoxingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMBoxingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CDC45822AAF67A4001E6FB4 /* MVVMBoxingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMBoxingTests.swift; sourceTree = "<group>"; };
-		5CDC458B2AAF6A43001E6FB4 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutoMockable.generated.swift; path = GeneratedMocks/AutoMockable.generated.swift; sourceTree = "<group>"; };
 		5CFC8AA32AAB1EFA00BC2B37 /* MVVMBoxing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMBoxing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CFC8AA62AAB1EFA00BC2B37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CFC8AAA2AAB1EFA00BC2B37 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				5CFC8AAA2AAB1EFA00BC2B37 /* SearchViewController.swift */,
 				5C95707C2AAB20040093DEF3 /* SearchViewModel.swift */,
 				5C7FE7BC2AB00031004A9710 /* SearchModuleBuilder.swift */,
+				5C590BA92AB0099A00216615 /* DefaultSearchModuleCoordinator.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -186,7 +189,7 @@
 		5CDC45812AAF67A4001E6FB4 /* MVVMBoxingTests */ = {
 			isa = PBXGroup;
 			children = (
-				5CDC458B2AAF6A43001E6FB4 /* AutoMockable.generated.swift */,
+				5C590BA72AB008BF00216615 /* MVVMBoxingMocks.swift */,
 				5CDC45822AAF67A4001E6FB4 /* MVVMBoxingTests.swift */,
 			);
 			path = MVVMBoxingTests;
@@ -422,8 +425,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C590BA82AB008BF00216615 /* MVVMBoxingMocks.swift in Sources */,
 				5CDC45832AAF67A4001E6FB4 /* MVVMBoxingTests.swift in Sources */,
-				5CDC458C2AAF6A43001E6FB4 /* AutoMockable.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +442,7 @@
 				5C5C3D762AADBB210084C3DC /* MovieSearchResultViewModel.swift in Sources */,
 				5CFC8AAB2AAB1EFA00BC2B37 /* SearchViewController.swift in Sources */,
 				5CDC457B2AAF628B001E6FB4 /* Coordinator.swift in Sources */,
+				5C590BAA2AB0099A00216615 /* DefaultSearchModuleCoordinator.swift in Sources */,
 				5CB89D8A2AAC25760017A2DE /* NetworkEndPoints.swift in Sources */,
 				5C65B2A42AAB75B900A4446C /* MoviesService.swift in Sources */,
 				5CFC8AA72AAB1EFA00BC2B37 /* AppDelegate.swift in Sources */,

@@ -14,6 +14,8 @@ class SearchViewController: UIViewController {
     
     private let viewModel: DefaultSearchviewModel
     
+    weak var coordinator: SearchModuleCoordinator?
+    
     private lazy var searchBar = {
         let searchBar = UISearchBar(frame: .zero)
         searchBar.delegate = self
@@ -105,5 +107,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         }
         let cell = MovieSearchResultTableViewCell()
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movie = viewModel.searchResult[indexPath.row]
+        self.coordinator?.showDetails(for: movie)
     }
 }

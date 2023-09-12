@@ -41,9 +41,7 @@ final class DefaultSearchviewModel: SearchViewModel {
         guard keyword.count > 3 else { return }
         
         previousTask = Task.detached { [self] in
-            print("Schedule search for: \(keyword)")
             try await Task.sleep(nanoseconds: 250_000_000)
-            print("Started search for: \(keyword)")
             do {
                 let movies = try await service.search(movieName: keyword)
                 await MainActor.run {
