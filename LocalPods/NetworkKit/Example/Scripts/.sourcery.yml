@@ -3,6 +3,6 @@ sources:
 templates:
   - ./SourceryTemplates/AutoMockable.stencil
 output:
-  ../../Tests/GeneratedMocks/
+  ../../Tests/GeneratedMocks/NetworkKitMocks.swift
 args:
   autoMockableTestableImports: ["NetworkKit"]
