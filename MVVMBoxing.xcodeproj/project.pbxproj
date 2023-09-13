@@ -227,8 +227,8 @@
 		5CFC8AA52AAB1EFA00BC2B37 /* MVVMBoxing */ = {
 			isa = PBXGroup;
 			children = (
-				5CDC45792AAF6280001E6FB4 /* Coordinators */,
 				5C5C3D692AADA6910084C3DC /* AppModules */,
+				5CDC45792AAF6280001E6FB4 /* Coordinators */,
 				5CB89D8E2AAC27B60017A2DE /* DIContainers */,
 				5CB89D882AAC25580017A2DE /* Utilities */,
 				5C65B2A52AAB763100A4446C /* DataModels */,

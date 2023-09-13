@@ -12,7 +12,7 @@ import Combine
 @MainActor
 class SearchViewController: UIViewController {
     
-    private let viewModel: DefaultSearchviewModel
+    private let viewModel: SearchViewModel
     
     weak var coordinator: SearchModuleCoordinator?
     
@@ -69,7 +69,7 @@ class SearchViewController: UIViewController {
     
     private var bindings = [AnyCancellable]()
     private func setupBinding() {
-        viewModel.$searchResult.receive(on: DispatchQueue.main).sink { [weak self] _ in
+        viewModel.publishedSearchResult.receive(on: DispatchQueue.main).sink { [weak self] _ in
              self?.tableView.reloadData()
             // Here we can add some error handling logic.
         }.store(in: &bindings)

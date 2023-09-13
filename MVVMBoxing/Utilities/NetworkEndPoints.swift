@@ -18,7 +18,7 @@ enum DefaultNetworkEndPointsProvider: NetworkEndPointsProvider {
     private var host: String {
         switch Self.appConfigurator.currentConfiguration {
         case .debug: return "https://api.themoviedb.org"
-        case .release: return "https://api.themoviedb.org"
+        case .release: return "https://api.themoviedb-prod.org"
         }
     }
     

@@ -11,6 +11,7 @@ public enum AppConfiguration {
     case release // prod env
 }
 
+/// The single source of truth for the configuration the app is running on
 public protocol AppConfigurator: AnyObject {
     var currentConfiguration: AppConfiguration { get }
     func setAppConfiguration(_ configuration: AppConfiguration)

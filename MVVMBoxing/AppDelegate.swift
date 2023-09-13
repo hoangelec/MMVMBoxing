@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        registerAppConfiguration()
+        registerAppConfiguration() // Handle different envs/configurations
         
         // We can abstract the builder to make this testable later
         coordinator = SearchModuleBuilder().build()
@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func registerAppConfiguration() {
-        // Don't mind that this is yet, it just simply return an AppConfigurator object
+        
         let configurator = AppConfiguratorContainer.shared.appConfigurator()
 #if DEBUG
         configurator.setAppConfiguration(.debug)

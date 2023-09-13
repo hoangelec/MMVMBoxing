@@ -10,6 +10,9 @@ import Combine
 import Factory
 
 protocol SearchViewModel {
+    
+    var publishedSearchResult: Published<[Movie]>.Publisher { get }
+    
     var searchResult: [Movie] { get }
     func scheduleSearch(keyword: String)
     func buildCellViewModel(at index: Int) async -> MovieSearchResultViewModel
@@ -17,6 +20,8 @@ protocol SearchViewModel {
 
 final class DefaultSearchviewModel: SearchViewModel {
     @MainActor @Published var searchResult: [Movie] = []
+    
+    var publishedSearchResult: Published<[Movie]>.Publisher { $searchResult }
     
     private var previousTask: Task<Void, Error>?
     
