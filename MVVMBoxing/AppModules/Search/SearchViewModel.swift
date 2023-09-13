@@ -20,8 +20,6 @@ final class DefaultSearchviewModel: SearchViewModel {
     
     private var previousTask: Task<Void, Error>?
     
-    private var bindings = [AnyCancellable]()
-    
     @LazyInjected(\ServicesContainer.moviesService)
     private var service: MoviesService //  `service` is injected at runtime, we don't need explicitly write DI code in its initialization
     
@@ -37,7 +35,7 @@ final class DefaultSearchviewModel: SearchViewModel {
         guard keyword.count > 3 else { return }
         
         previousTask = Task.detached { [self] in
-            try await Task.sleep(nanoseconds: 250_000_000)
+            try await Task.sleep(nanoseconds: 500_000_000)
             do {
                 let movies = try await service.search(movieName: keyword)
                 await MainActor.run {

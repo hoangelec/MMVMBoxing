@@ -7,8 +7,8 @@
 
 public enum AppConfiguration {
     static var globalConfiguration: AppConfiguration = .debug
-    case debug
-    case release
+    case debug // dev env
+    case release // prod env
 }
 
 public protocol AppConfigurator: AnyObject {

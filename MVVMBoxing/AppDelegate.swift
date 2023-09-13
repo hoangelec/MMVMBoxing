@@ -36,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func registerAppConfiguration() {
+        // Don't mind that this is yet, it just simply return an AppConfigurator object
         let configurator = AppConfiguratorContainer.shared.appConfigurator()
 #if DEBUG
         configurator.setAppConfiguration(.debug)

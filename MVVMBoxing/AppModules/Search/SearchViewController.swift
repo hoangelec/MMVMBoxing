@@ -71,6 +71,7 @@ class SearchViewController: UIViewController {
     private func setupBinding() {
         viewModel.$searchResult.receive(on: DispatchQueue.main).sink { [weak self] _ in
              self?.tableView.reloadData()
+            // Here we can add some error handling logic.
         }.store(in: &bindings)
     }
     
