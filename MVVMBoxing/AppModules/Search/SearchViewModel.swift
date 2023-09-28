@@ -18,7 +18,7 @@ protocol SearchViewModel {
     func buildCellViewModel(at index: Int) async -> MovieSearchResultViewModel
 }
 
-final class DefaultSearchviewModel: SearchViewModel {
+final class DefaultSearchViewModel: SearchViewModel {
     @MainActor @Published var searchResult: [Movie] = []
     
     var publishedSearchResult: Published<[Movie]>.Publisher { $searchResult }

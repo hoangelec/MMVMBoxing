@@ -9,7 +9,6 @@ import UIKit
 import SnapKit
 import Combine
 
-@MainActor
 class SearchViewController: UIViewController {
     
     private let viewModel: SearchViewModel
@@ -30,14 +29,11 @@ class SearchViewController: UIViewController {
             MovieSearchResultTableViewCell.self,
             forCellReuseIdentifier: MovieSearchResultTableViewCell.reuseIdentifier
         )
-
-        tableView.estimatedRowHeight = MovieSearchResultTableViewCell.UIConstants.cellSize
-        tableView.rowHeight = UITableView.automaticDimension
         
         return tableView
     }()
     
-    init(viewModel: DefaultSearchviewModel) {
+    init(viewModel: DefaultSearchViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -95,7 +91,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        return MovieSearchResultTableViewCell.UIConstants.cellSize
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

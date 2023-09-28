@@ -11,3 +11,4 @@ import UIKit
 protocol Coordinator: AnyObject {
     @discardableResult func start() -> UIViewController
 }
+

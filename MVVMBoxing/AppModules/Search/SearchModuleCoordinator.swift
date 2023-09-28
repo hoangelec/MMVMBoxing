@@ -14,24 +14,23 @@ protocol SearchModuleCoordinator: Coordinator {
 
 final class DefaultSearchModuleCoordinator: SearchModuleCoordinator {
     let navigationController: UINavigationController
+    let searchViewControllerBuilder: SearchViewControllerBuilder
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, searchViewControllerBuilder: SearchViewControllerBuilder = DefaultSearchViewControllerBuilder.common) {
         self.navigationController = navigationController
+        self.searchViewControllerBuilder = searchViewControllerBuilder
     }
     
     @MainActor @discardableResult func start() -> UIViewController {
-        let searchViewController = SearchViewController(viewModel: DefaultSearchviewModel())
+        let searchViewController = searchViewControllerBuilder.build()
         searchViewController.coordinator = self
         navigationController.viewControllers = [searchViewController]
         return navigationController
     }
     
     func showDetails(for movie: Movie) {
-        let alert = UIAlertController(title: "\(movie.title)", message: ")\(movie.overview)", preferredStyle: .alert)
-        
-        alert.addAction(.init(title: "Dismiss", style: .cancel))
-        
-        navigationController.present(alert, animated: true)
+        let detailsCoordinator = DefaultMovieDetailModuleBuilder().build(in: navigationController, movie: movie)
+        detailsCoordinator.start()
     }
 }
 

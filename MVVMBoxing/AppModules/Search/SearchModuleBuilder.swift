@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol AppModuleBuilder {
-    func build() -> Coordinator
-}
-
 final class SearchModuleBuilder: AppModuleBuilder {
     func build() -> Coordinator {
         let navigationController = UINavigationController()
@@ -24,7 +20,17 @@ final class SearchModuleBuilder: AppModuleBuilder {
             navigationController.navigationBar.isTranslucent = false
             navigationController.navigationBar.tintColor = .systemBackground
         }
-        
         return DefaultSearchModuleCoordinator(navigationController: navigationController)
+    }
+}
+
+protocol SearchViewControllerBuilder {
+    func build() -> SearchViewController
+}
+
+enum DefaultSearchViewControllerBuilder: SearchViewControllerBuilder {
+    case common
+    func build() -> SearchViewController {
+        SearchViewController(viewModel: DefaultSearchViewModel())
     }
 }
