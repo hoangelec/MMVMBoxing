@@ -23,7 +23,7 @@ enum DefaultNetworkEndPointsProvider: NetworkEndPointsProvider {
     }
     
     @LazyInjected(\AppConfiguratorContainer.appConfigurator)
-    private static var appConfigurator: AppConfigurator 
+    private static var appConfigurator: AppConfigurator // appConfigurator's value will be injected at runtime
     
     var search: String {
         host.appending("/3/search/movie")

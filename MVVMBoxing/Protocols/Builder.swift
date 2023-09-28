@@ -5,6 +5,6 @@
 //  Created by Hoang Cap on 12/09/2023.
 //
 
-protocol AppModuleBuilder {
+protocol AppSceneBuilder {
     func build() -> Coordinator
 }

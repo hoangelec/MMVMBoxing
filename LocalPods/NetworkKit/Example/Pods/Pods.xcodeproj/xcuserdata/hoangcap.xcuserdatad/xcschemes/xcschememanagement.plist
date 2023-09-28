@@ -14,10 +14,10 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>NetworkKit-Unit-Tests.xcscheme_^#shared#^_</key>
+		<key>NetworkKit-Unit-Tests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>NetworkKit.xcscheme</key>
 		<dict>

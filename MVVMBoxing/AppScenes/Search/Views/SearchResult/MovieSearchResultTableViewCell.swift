@@ -17,7 +17,7 @@ final class MovieSearchResultTableViewCell: UITableViewCell {
     static let reuseIdentifier = "MovieSearchTableViewCell"
     private lazy var titleLabel = {
         let label = UILabel()
-        label.numberOfLines = 1
+        label.numberOfLines = 2
         return label
     }()
     

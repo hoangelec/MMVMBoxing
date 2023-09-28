@@ -1,5 +1,5 @@
 //
-//  MovieDetailModuleBuilder.swift
+//  MovieDetailSceneBuilder.swift
 //  MVVMBoxing
 //
 //  Created by Hoang Cap on 28/09/2023.
@@ -8,14 +8,14 @@
 import Foundation
 import UIKit
 
-protocol MovieDetailModuleBuilder {
+protocol MovieDetailSceneBuilder {
     func build(in container: UIViewController, movie: Movie) -> Coordinator
 }
 
-enum DefaultMovieDetailModuleBuilder: MovieDetailModuleBuilder {
+enum DefaultMovieDetailSceneBuilder: MovieDetailSceneBuilder {
     case common
     func build(in container: UIViewController, movie: Movie) -> Coordinator {
-        DefaultMovieDetailModuleCoordinator(movie: movie, container: container)
+        DefaultMovieDetailSceneCoordinator(movie: movie, container: container)
     }
 }
 

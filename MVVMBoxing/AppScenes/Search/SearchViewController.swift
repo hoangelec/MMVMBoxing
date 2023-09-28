@@ -13,7 +13,7 @@ class SearchViewController: UIViewController {
     
     private let viewModel: SearchViewModel
     
-    weak var coordinator: SearchModuleCoordinator?
+    weak var coordinator: SearchSceneCoordinator?
     
     private lazy var searchBar = {
         let searchBar = UISearchBar(frame: .zero)

@@ -1,5 +1,5 @@
 //
-//  MovieDetailModuleBuilder.swift
+//  MovieDetailSceneCoordinator.swift
 //  MVVMBoxing
 //
 //  Created by Hoang Cap on 28/09/2023.
@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-protocol MovieDetailModuleCoordinator: Coordinator {}
+protocol MovieDetailSceneCoordinator: Coordinator {}
 
-final class DefaultMovieDetailModuleCoordinator: MovieDetailModuleCoordinator {
+final class DefaultMovieDetailSceneCoordinator: MovieDetailSceneCoordinator {
 
     private let movieDetailViewControllerBuilder: MovieDetailViewControllerBuilder
     private let container: UIViewController

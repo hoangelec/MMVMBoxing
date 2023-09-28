@@ -17,15 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private var coordinator: Coordinator?
 
-    @LazyInjected(\AppModuleBuilderContainer.rootModuleBuilder)
-    private var rootBuilder: AppModuleBuilder
+    @LazyInjected(\AppSceneBuilderContainer.rootModuleBuilder)
+    private var rootBuilder: AppSceneBuilder
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         registerAppConfiguration() // Handle different envs/configurations
         
         // We can abstract the builder to make this testable later
-        coordinator = rootBuilder.build()
+        coordinator = rootBuilder.build() // -> this gives me an Coordinator
         
         window = UIWindow(frame: UIScreen.main.bounds)
         

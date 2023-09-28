@@ -25,7 +25,6 @@ extension NetworkClient {
     }
 }
 
-
 public final class NonTestableNetworkClient: NetworkClient {
     
     public static let shared = NonTestableNetworkClient()
