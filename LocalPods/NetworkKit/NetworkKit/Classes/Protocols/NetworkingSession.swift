@@ -10,7 +10,3 @@ public protocol NetworkingSession {
 }
 
 extension URLSession: NetworkingSession {}
-
-public protocol RandomProtocol {
-    func doSomething(with argument: String)
-}

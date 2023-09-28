@@ -30,6 +30,9 @@ class SearchViewController: UIViewController {
             MovieSearchResultTableViewCell.self,
             forCellReuseIdentifier: MovieSearchResultTableViewCell.reuseIdentifier
         )
+
+        tableView.estimatedRowHeight = MovieSearchResultTableViewCell.UIConstants.cellSize
+        tableView.rowHeight = UITableView.automaticDimension
         
         return tableView
     }()
@@ -92,7 +95,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return MovieSearchResultTableViewCell.UIConstants.cellSize
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

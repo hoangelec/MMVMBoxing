@@ -6,7 +6,6 @@
 //
 
 public enum AppConfiguration {
-    static var globalConfiguration: AppConfiguration = .debug
     case debug // dev env
     case release // prod env
 }

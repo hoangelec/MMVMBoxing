@@ -6,12 +6,11 @@
 //
 
 import UIKit
-import SnapKit
 
 final class MovieSearchResultTableViewCell: UITableViewCell {
     
     enum UIConstants {
-        static let cellSize: Double = 100
+        static let cellSize: Double = 200
     }
     
     static let reuseIdentifier = "MovieSearchTableViewCell"
@@ -23,7 +22,7 @@ final class MovieSearchResultTableViewCell: UITableViewCell {
     
     private lazy var overviewLabel = {
         let label = UILabel()
-        label.numberOfLines = 0
+        label.numberOfLines = 10
         label.font = UIFont.italicSystemFont(ofSize: 14)
         return label
     }()
@@ -31,6 +30,7 @@ final class MovieSearchResultTableViewCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.backgroundColor = .gray
         imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = 5
         imageView.clipsToBounds = true
         return imageView
     }()
@@ -57,9 +57,9 @@ final class MovieSearchResultTableViewCell: UITableViewCell {
         
         posterImageView.snp.makeConstraints { make in
             make.leadingMargin.equalToSuperview()
-            make.width.equalTo(posterImageView.snp.height)
+            make.width.height.equalTo(UIConstants.cellSize / 2)
             make.topMargin.equalToSuperview()
-            make.bottomMargin.equalToSuperview()
+            make.bottomMargin.equalToSuperview().priority(.medium)
         }
         
         titleLabel.snp.makeConstraints { make in

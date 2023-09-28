@@ -8,6 +8,7 @@
 import UIKit
 import FoundationKit
 import NetworkKit
+import Factory
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,14 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     private var coordinator: Coordinator?
+
+    @LazyInjected(\AppModuleBuilderContainer.rootModuleBuilder)
+    private var rootBuilder: AppModuleBuilder
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
         registerAppConfiguration() // Handle different envs/configurations
         
         // We can abstract the builder to make this testable later
-        coordinator = SearchModuleBuilder().build()
+        coordinator = rootBuilder.build()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         

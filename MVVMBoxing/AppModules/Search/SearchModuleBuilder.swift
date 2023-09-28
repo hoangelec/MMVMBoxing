@@ -7,7 +7,11 @@
 
 import UIKit
 
-final class SearchModuleBuilder {
+protocol AppModuleBuilder {
+    func build() -> Coordinator
+}
+
+final class SearchModuleBuilder: AppModuleBuilder {
     func build() -> Coordinator {
         let navigationController = UINavigationController()
         if #available(iOS 15.0, *) {
