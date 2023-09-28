@@ -12,7 +12,8 @@ protocol MovieDetailModuleBuilder {
     func build(in container: UIViewController, movie: Movie) -> Coordinator
 }
 
-final class DefaultMovieDetailModuleBuilder {
+enum DefaultMovieDetailModuleBuilder: MovieDetailModuleBuilder {
+    case common
     func build(in container: UIViewController, movie: Movie) -> Coordinator {
         DefaultMovieDetailModuleCoordinator(movie: movie, container: container)
     }

@@ -30,6 +30,7 @@ final class MovieDetailViewController: UIViewController {
     private lazy var overviewLabel = {
         let label = UILabel()
         label.text = viewModel.overview
+        label.textAlignment = .center
         label.numberOfLines = 0
         label.font = .italicSystemFont(ofSize: 16)
         return label
@@ -37,7 +38,7 @@ final class MovieDetailViewController: UIViewController {
 
     private lazy var releaseDateLabel = {
         let label = UILabel()
-        label.text = viewModel.releaseDate
+        label.text = "Release date: \(viewModel.releaseDate)"
         label.font = .boldSystemFont(ofSize: 16)
         return label
     }()
@@ -65,7 +66,7 @@ final class MovieDetailViewController: UIViewController {
             make.width.equalToSuperview().dividedBy(3)
             make.width.equalTo(imageView.snp.height)
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().dividedBy(2)
+            make.centerY.equalToSuperview().dividedBy(2.5)
         }
 
         titleLabel.snp.makeConstraints { make in
@@ -73,15 +74,17 @@ final class MovieDetailViewController: UIViewController {
             make.centerX.equalToSuperview()
         }
 
+        releaseDateLabel.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom)
+            make.centerX.equalToSuperview()
+        }
+
         overviewLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(10)
+            make.top.equalTo(releaseDateLabel.snp.bottom).offset(20)
             make.leadingMargin.trailingMargin.equalToSuperview()
         }
 
-        releaseDateLabel.snp.makeConstraints { make in
-            make.top.equalTo(overviewLabel.snp.bottom)
-            make.centerX.equalToSuperview()
-        }
+
 
         viewModel.loadImage { [weak self] in
             self?.imageView.image = $0

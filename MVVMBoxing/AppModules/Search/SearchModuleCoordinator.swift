@@ -13,12 +13,17 @@ protocol SearchModuleCoordinator: Coordinator {
 }
 
 final class DefaultSearchModuleCoordinator: SearchModuleCoordinator {
-    let navigationController: UINavigationController
-    let searchViewControllerBuilder: SearchViewControllerBuilder
+    private let navigationController: UINavigationController
+    private let searchViewControllerBuilder: SearchViewControllerBuilder
+    private let movieDetailModuleBuilder: MovieDetailModuleBuilder
     
-    init(navigationController: UINavigationController, searchViewControllerBuilder: SearchViewControllerBuilder = DefaultSearchViewControllerBuilder.common) {
+    init(navigationController: UINavigationController,
+         searchViewControllerBuilder: SearchViewControllerBuilder = DefaultSearchViewControllerBuilder.common,
+         movieDetailModuleBuilder: MovieDetailModuleBuilder = DefaultMovieDetailModuleBuilder.common
+    ) {
         self.navigationController = navigationController
         self.searchViewControllerBuilder = searchViewControllerBuilder
+        self.movieDetailModuleBuilder = movieDetailModuleBuilder
     }
     
     @MainActor @discardableResult func start() -> UIViewController {
@@ -29,7 +34,7 @@ final class DefaultSearchModuleCoordinator: SearchModuleCoordinator {
     }
     
     func showDetails(for movie: Movie) {
-        let detailsCoordinator = DefaultMovieDetailModuleBuilder().build(in: navigationController, movie: movie)
+        let detailsCoordinator = movieDetailModuleBuilder.build(in: navigationController, movie: movie)
         detailsCoordinator.start()
     }
 }
